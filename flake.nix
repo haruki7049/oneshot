@@ -44,6 +44,12 @@
             # Rust crate smithay dependencies
             pkgs.seatd
             pkgs.systemd
+
+            # Rust crate wayland-server dependencies
+            pkgs.libinput
+            pkgs.libxkbcommon
+            pkgs.libgbm
+            pkgs.pixman
           ];
           nativeBuildInputs = [
             # Build tools
