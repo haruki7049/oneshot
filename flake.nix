@@ -40,7 +40,11 @@
           overlays = [ inputs.rust-overlay.overlays.default ];
 
           src = lib.cleanSource ./.;
-          buildInputs = [ ];
+          buildInputs = [
+            # Rust crate smithay dependencies
+            pkgs.seatd
+            pkgs.systemd
+          ];
           nativeBuildInputs = [
             # Build tools
             pkgs.pkg-config
