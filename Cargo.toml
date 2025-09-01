@@ -2,7 +2,7 @@
 name = "oneshot"
 authors = ["haruki7049 <tontonkirikiri@gmail.com>"]
 version = "0.1.0"
-description = "A wayland compositor"
+description = "A wayland compositor for pure TTY users"
 edition = "2024"
 license = "Apache"
 readme = "README.md"
