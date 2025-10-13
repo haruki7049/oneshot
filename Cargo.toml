@@ -12,4 +12,5 @@ repository = "https://github.com/haruki7049/oneshot"
 
 [dependencies]
 smithay = "0.7.0"
+tracing = "0.1.41"
 wayland-server = "0.31.10"

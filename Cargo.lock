@@ -1002,6 +1002,7 @@ name = "oneshot"
 version = "0.1.0"
 dependencies = [
  "smithay",
+ "tracing",
  "wayland-server",
 ]
 
