@@ -1,6 +1,7 @@
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     // Event loop
-    let mut event_loop: calloop::EventLoop<oneshot::state::CalloopData> = calloop::EventLoop::try_new()?;
+    let mut event_loop: calloop::EventLoop<oneshot::state::CalloopData> =
+        calloop::EventLoop::try_new()?;
     let event_loop_handle = event_loop.handle();
 
     // Display

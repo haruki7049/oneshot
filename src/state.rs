@@ -51,7 +51,10 @@ impl OneShot {
                 // You may also associate some data with the client when inserting the client.
                 state
                     .display_handle
-                    .insert_client(client_stream, std::sync::Arc::new(self::client::ClientState::default()))
+                    .insert_client(
+                        client_stream,
+                        std::sync::Arc::new(self::client::ClientState::default()),
+                    )
                     .unwrap();
             })
             .expect("Failed to init the wayland event source.");
@@ -90,7 +93,10 @@ impl smithay::wayland::compositor::CompositorHandler for OneShot {
         &self,
         client: &'a wayland_server::Client,
     ) -> &'a smithay::wayland::compositor::CompositorClientState {
-        &client.get_data::<self::client::ClientState>().unwrap().compositor_state
+        &client
+            .get_data::<self::client::ClientState>()
+            .unwrap()
+            .compositor_state
     }
 
     fn commit(&mut self, _surface: &wayland_server::protocol::wl_surface::WlSurface) {}
